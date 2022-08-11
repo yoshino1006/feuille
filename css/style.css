@@ -1,0 +1,559 @@
+@charset "UTF-8";
+/* CSS Document */
+.pc {
+	display: block;
+}
+.sp {
+    display: none;
+	}	
+/* 背景画像 */
+.bg-img {
+    background-size:cover;
+	height: 763px;
+}
+#bg {
+	background-image: url("../image/fv-画像背景.jpg");
+}
+.bg-img2 {
+	background-image: url("../image/footer-画像背景.jpg");
+	background-size:cover;
+}
+.bg-color {
+	background-color: #F9FEF9;
+}
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 120px;
+	width:100%;
+}
+/*JSを使いfixedクラスが付与された際の設定*/
+.header.fixed{
+	position: fixed;/*fixedを設定して固定*/
+  z-index: 999;/*最前面へ*/
+  top:0;/*位置指定*/
+  left:0;/*位置指定*/
+}
+/* ハンバーガーメニュー */
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 70px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+/* 棒の位置調整 */
+.drawer_open span:after {
+  top: 18px;
+  width: 35px;
+  left: 35px;
+}
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span {
+  bottom: 0;
+  transform: rotate(45deg);
+	top: 28px;
+  width: 35px;
+}
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-90deg);
+	width: 35px;
+	left: 0px;
+}
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background:#F9FEF9;
+  transition: .5s;
+}
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+}
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 0;/* メニューを画面に入れる */
+}
+.nav_content {
+	padding: 10rem;
+}
+.nav_item {
+	padding: 1rem;
+}
+.nav_item a{
+	font-family: Gill Sans;
+	font-size: 18px;
+	letter-spacing: 0.12em;
+	color: #333;
+}
+/* FV */
+.main-contents {
+	display: flex;
+	justify-content: flex-end;
+}
+.scroll {
+    margin-left: 107px;
+    position: relative;
+    bottom: 230px;
+    margin-bottom: -230px;
+}
+.scroll img {
+	animation: scroll 2s ease infinite; 
+}
+/* アニメーション */
+@keyframes scroll {
+  0% {
+    transform: translateY(0); }
+  5% {
+    transform: translateY(0); }
+  10% {
+    transform: translateY(0); }
+  20% {
+    transform: translateY(-10px); }
+  25% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(-10px); }
+  50% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(0); } }
+/* NEWS */
+.NEWS {
+	display: flex;
+	justify-content: center;
+}
+.NEWS h2{
+	font-family: Gill Sans;
+	font-size: 35px;
+	letter-spacing: 0.12em;
+	color: #333;
+}
+.page-title {
+	padding: 275px 145px 200px 0px;
+}
+.news-contents li {
+	font-family: "Ryo Gothic PlusN";
+	font-size: 20px;
+	line-height: 4;
+	color: #333;
+}
+.news-contents li a:hover {
+	opacity: 0.5 ;
+}
+.news-list {
+	padding: 160px 0 10px;
+}
+.news-itesm {
+	border-bottom: 1px solid #707070;
+	padding-bottom: 4px;
+}
+/* area */
+.area {
+	margin: 60px 0 160px;
+}
+.area img{	
+	width: 100%;
+	background-size: cover;
+}
+  /* CONCEPT */
+.CONCEPT {
+	margin: 0 auto;
+	max-width: 1126px;
+	background-image: url("../image/concept-leaf.png");
+	display: block;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding-bottom: 360px;
+}
+.CONCEPT h2 {
+	font-family: Gill Sans;
+	font-size: 35px;
+	letter-spacing: 0.12em;
+	color: #333;
+	text-align: center;
+}
+.concept-title {
+	padding-bottom: 120px;
+}
+.concept-img {
+	text-align: center;
+}
+.concept-picture {
+	padding-bottom: 32px;
+}
+.concept-logo {
+	padding-bottom: 56px;
+}
+.concept-heading {
+	padding-bottom: 100px;
+}
+.CONCEPT p {
+	text-align: center;
+	line-height: 3.6;
+	font-family: "Ryo Gothic PlusN";
+	font-size: 18px;
+	color: #333;
+}
+.concept-img1 {
+	position: absolute;
+	left: 0;
+	top: 170rem;
+}
+.concept-img2 {
+	position: absolute;
+	right: 0;
+	top: 155rem;
+}
+ /* PickUpProduct */
+.PickUpProduct {
+	max-width: 1126px;
+	margin: 0 auto;
+	width: 100%;
+}
+.PickUpProduct-contents{
+display: flex;
+justify-content: space-between;
+}
+.PickUpProduct h2 {
+	font-family: Gill Sans;
+	font-size: 35px;
+	letter-spacing: 0.12em;
+	color: #333;
+	text-align: center;
+}
+.PickUpProduct-title {
+	padding: 130px 0 80px;
+}
+.PickUpProduct-img {
+	padding-top: 120px;
+}
+.PickUpProduct-img a {
+	transition: 1.0s ;
+}
+.PickUpProduct-img a:hover {
+	opacity: 0.5 ;
+}
+.PickUpProduct-lead h3{
+	font-family: Gill Sans;
+	font-size: 35px;
+	letter-spacing: 0.12em;
+	color: #333;
+	text-align: center;
+}
+.PickUpProduct-lead-title {
+	padding-bottom: 32px;
+}
+.PickUpProduct-lead-img1{
+	padding-bottom: 42px;
+	text-align: center;
+}
+.PickUpProduct-lead-img2 {
+	padding-bottom: 200px;
+	text-align: center;
+}
+/* PRODUCT */
+.PRODUCT {
+	max-width: 1126px;
+	margin: 0 auto;
+	width: 100%;
+}
+.product-title {
+	padding-bottom: 80px;
+}
+.PRODUCT h2 {
+	font-family: Gill Sans;
+	font-size: 35px;
+	letter-spacing: 0.12em;
+	color: #333;
+	text-align: center;
+}
+.product-contents {
+	display: grid;
+	gap: 120px 77px;
+	grid-template-rows: repeat(2, auto);
+	grid-template-columns: repeat(2, auto);
+	justify-content: space-between;
+	margin-bottom: 160px;
+}
+.product-item h4 {
+	font-family: Gill Sans;
+	font-size: 25px;
+	letter-spacing: 0.12em;
+	color: #333;
+	padding: 24px 0;
+}
+.product-item p {
+	font-family: Gill Sans,"Ryo Gothic PlusN";
+	font-size: 20px;
+	letter-spacing: 0.12em;
+	color: #333;
+}
+.product-item a{
+	transition: 1.0s ;
+}
+.product-item a:hover{
+	opacity: 0.5 ;
+}
+/* productボタン */
+.product-btn:hover{
+	opacity: 0.5 ;
+}
+.product-detail {
+	display: flex;
+	background-image:url("../image/product-btn.png");
+	align-items: center;
+	width: 445px;
+	height: 129px;
+	justify-content: center;
+	margin: 0 auto;
+}
+.product-list {
+	text-align: center;
+}
+.product-list p {
+	font-family: "Ryo Gothic PlusN";
+	font-weight: 500;
+	font-size: 22px;
+	letter-spacing: 0.12em;
+	color: #333;
+}
+.arrow {
+	padding-bottom: 10px;
+}
+/* area2 */
+.area2 {
+	padding-top: 160px;
+}
+.area2 img {
+	width: 100%;
+	background-size: cover;
+}
+/* footer */
+footer {
+	max-width: 1126px;
+	margin: 0 auto;
+	width: 100%;
+	padding:7.5rem 0 2.5rem;
+}
+footer h1 {
+	width: 17%;
+	margin: 0 auto;
+}
+.SNS-logo  {
+	display: flex;
+	padding-top: 32px;
+	width: 16%;
+	margin: 0 auto;
+}
+.twitter-logo {
+	padding:3px 1.5rem;
+}
+.twitter-logo:hover {
+	opacity: 0.5 ;
+}
+.insta-logo:hover {
+	opacity: 0.5 ;
+}
+.footer-nav {
+	width: 444px;
+	margin: 0 auto;
+	padding:36px 0 40px;
+}
+.footer-nav ul {
+	display: flex;
+}
+.footer-nav li {
+	font-family: Gill Sans;
+	font-size: 15px;
+	letter-spacing: 0.12em;
+	color: #333;
+	padding-right: 72px;
+}
+.footer-nav a:hover {
+	opacity: 0.5 ;
+}
+footer p {
+	font-family: Gill Sans;
+	font-size: 15px;
+	letter-spacing: 0.12em;
+	color: #333;
+}
+.label {
+	margin: 0 auto;
+	width: 14%;
+}
+
+/*             スマホ版               */
+@media screen and (max-width:599px) {
+	.pc {
+		display: none;
+	}
+	.sp {
+		display: block;
+	}
+	/* header */
+	.header {
+		display: flex;
+		justify-content: space-between;
+		padding: 5%;
+	}
+	.logo {
+		width: 50%;
+	}
+	.main-contents img {
+		width: 95%;
+		margin-left: 0 5%;
+	}
+	.scroll {
+		display: none;
+	}
+	/* NEWS */
+	.NEWS {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	.page-title {
+		padding: initial;
+		text-align: center;
+	}
+	.news-list {
+		padding: initial;
+		padding-top: 2.5rem;
+	}
+	/* CONCEPT */
+	.CONCEPT {
+		background-image: none;
+		background-image: url("../image/concept-leaf-sp.png");
+		background-position: 50% 50%;
+	}
+	.concept-img1 {
+		top: 184rem;
+	}
+	.concept-img2 {
+		top: 168rem;
+	}
+	/* PickUpProduct */
+	.PickUpProduct {
+		margin: 0 auto;
+		max-width:445px; 
+		margin-top: 50%;
+	}
+	.PickUpProduct-contents {
+		display: block;
+	}
+	.PickUpProduct-img {
+		text-align: center;
+		padding: initial;
+	}
+	.PickUpProduct-img img{
+		width: 100%;
+	}
+	.PickUpProduct-lead-title {
+		margin-top: 50px;
+	}
+	.PickUpProduct-lead-img2 {
+		max-width: 445px;
+	}
+	.PickUpProduct-lead-img2 img {
+		width: 100%;
+	}
+	/* PRODUCT */
+	.PRODUCT {
+		padding: initial;    
+		margin: 0 auto;
+    max-width: 445px;
+	}
+	.product-contents {
+		display: block;
+	}
+	.product-item {
+		padding-bottom: 80px;
+	}
+	.product-item img {
+		width: 100%;
+	}
+	.product-detail {
+		width: 100%;
+	}
+	/* footer */
+	footer {
+	 margin: 0 auto;
+	 max-width: 445px;
+	}
+	footer h1 {
+		padding: initial;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0 39%;
+	}
+	.SNS-logo {
+		margin: 0 auto;
+		max-width: 100px;
+		padding: 1.6rem 0 1.6rem;
+	}
+	.twitter-logo  {
+		margin: initial;
+		margin: 8% 0%;
+		padding-right: 10px;
+		width: 200px;
+		text-align: center;
+	}
+	.insta-logo {
+		margin: initial;
+		margin: 7%;
+		width: 200px;
+		text-align: center;
+	}
+	.footer-nav {
+		padding: initial;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0 16%;
+	}
+.footer-nav ul {
+	padding: initial;
+	margin: 0 0 1.5rem;
+}
+.footer-nav li {
+	padding: initial;
+	padding-right: 1.5rem;
+}
+	footer p{
+		padding: initial;
+		text-align: center;
+		padding-bottom: 5%;
+	}
+	
+}
