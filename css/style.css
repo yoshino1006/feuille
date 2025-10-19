@@ -402,6 +402,9 @@ footer h1 {
 .footer-nav a:hover {
 	opacity: 0.5 ;
 }
+.product-detail:hover {
+	opacity: 0.5 ;
+}
 footer p {
 	font-family: Gill Sans;
 	font-size: 15px;
