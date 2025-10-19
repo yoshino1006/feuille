@@ -359,20 +359,21 @@ justify-content: space-between;
 }
 /* footer */
 footer {
-	max-width: 1126px;
-	margin: 0 auto;
-	width: 100%;
-	padding:7.5rem 0 2.5rem;
+	text-align: center;
+    margin: 0 auto;
+    width: 1000px;
+    padding: 7.5rem 0 2.5rem;
 }
 footer h1 {
-	width: 17%;
 	margin: 0 auto;
 }
 .SNS-logo  {
 	display: flex;
-	padding-top: 32px;
-	width: 16%;
-	margin: 0 auto;
+    padding-top: 32px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
 }
 .twitter-logo {
 	padding:3px 1.5rem;
@@ -384,19 +385,19 @@ footer h1 {
 	opacity: 0.5 ;
 }
 .footer-nav {
-	width: 444px;
 	margin: 0 auto;
 	padding:36px 0 40px;
 }
 .footer-nav ul {
 	display: flex;
+    justify-content: center;
+    column-gap: 40px;
 }
 .footer-nav li {
 	font-family: Gill Sans;
 	font-size: 15px;
 	letter-spacing: 0.12em;
 	color: #333;
-	padding-right: 72px;
 }
 .footer-nav a:hover {
 	opacity: 0.5 ;
@@ -409,7 +410,6 @@ footer p {
 }
 .label {
 	margin: 0 auto;
-	width: 14%;
 }
 
 /*             スマホ版               */
